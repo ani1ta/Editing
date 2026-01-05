@@ -1,0 +1,15 @@
+export const initialTree = {
+    root: { id: 'root', name: 'DFIN', type: 'container', children: [{ id: 'collection-1-1', name: 'collection.1.1' }, { id: 'collection-1-2', name: 'collection.1.2' }, { id: 'collection-2', name: 'collection.2' }, { id: 'collection-3', name: 'collection.3' }, { id: 'collection-4', name: 'collection.4' }, { id: 'collection-5', name: 'collection.5' }] },
+    'collection-1-1': { id: 'collection-1-1', parentId: 'root', name: 'collection.1.1', type: 'container', children: [{ id: 'collection-1-1-1', name: 'collection.1.1.1' }] },
+    'collection-1-1-1': { id: 'collection-1-1-1', parentId: 'collection-1-1', name: 'collection.1.1.1', type: 'container', children: [{ id: 'content-page', name: 'Content Page 1.1.1.1' }, { id: 'quiz', name: 'Quiz' }, { id: 'videos', name: 'Videos' }, { id: 'wysiwyg-editor', name: 'WYSIWYG Editor' }] },
+    'content-page': { id: 'content-page', parentId: 'collection-1-1-1', name: 'Content Page 1.1.1.1', type: 'leaf', contentType: 'text' },
+    'quiz': { id: 'quiz', parentId: 'collection-1-1-1', name: 'Quiz', type: 'leaf', contentType: 'quiz' },
+    'videos': { id: 'videos', parentId: 'collection-1-1-1', name: 'Videos', type: 'leaf', contentType: 'video' },
+    'wysiwyg-editor': { id: 'wysiwyg-editor', parentId: 'collection-1-1-1', name: 'WYSIWYG Editor', type: 'leaf', contentType: 'text' },
+    'collection-1-2': { id: 'collection-1-2', parentId: 'root', name: 'collection.1.2', type: 'container', children: [] },
+    'collection-2': { id: 'collection-2', parentId: 'root', name: 'collection.2', type: 'container', children: [{ id: 'collection-2-1', name: 'collection.2.1' }] },
+    'collection-2-1': { id: 'collection-2-1', parentId: 'collection-2', name: 'collection.2.1', type: 'container', children: [] },
+    'collection-3': { id: 'collection-3', parentId: 'root', name: 'collection.3', type: 'container', children: [] },
+    'collection-4': { id: 'collection-4', parentId: 'root', name: 'collection.4', type: 'container', children: [] },
+    'collection-5': { id: 'collection-5', parentId: 'root', name: 'collection.5', type: 'container', children: [] },
+};
