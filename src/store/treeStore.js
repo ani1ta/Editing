@@ -44,14 +44,14 @@ export const useTreeStore = create(
 
             removeNode: (nodeId) => set((state) => {
                 const node = state.tree[nodeId];
-                
+
                 if (node.parentId && state.tree[node.parentId]) {
                     state.tree[node.parentId].children = state.tree[node.parentId].children.filter(
                         (child) => child.id !== node.id
                     );
                 }
 
-                node.children.forEach((child) => {
+                node.children?.forEach((child) => {
                     delete state.tree[child.id];
                 });
                 delete state.tree[node.id];
